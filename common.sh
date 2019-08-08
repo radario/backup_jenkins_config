@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
+# *USER* - github account
+# *REPO* - name of repository for backup
 
 JENKINS_DIR="/var/lib/jenkins"
 BACKUP_DIR=$JENKINS_DIR/git_backup
-REPO_HOSTNAME="bitbucket-jenkins-backup"
-REPO_URL="bitbucket.org"
-REPO_IDENTITYFILE="$JENKINS_DIR/.ssh/jenkins-bitbucket-backup-key"
-REPO_NAME="luisalima/shiftit-jenkins-config.git"
+REPO_HOSTNAME="github.com"
+REPO_URL="github.com"
+REPO_IDENTITYFILE="$JENKINS_DIR/.ssh/jenkins-backup-key"
+REPO_NAME="*USER*/*REPO*.git"
 GIT_REMOTE="git@$REPO_HOSTNAME:$REPO_NAME"
 GIT_BRANCH="master"
 
