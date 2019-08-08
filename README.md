@@ -2,7 +2,7 @@
 
 TL;DR: This repository has useful scripts for backing up your jenkins configuration to a git repository.
 
-Inspired by [this link](http://jenkins-ci.org/content/keeping-your-configuration-and-data-subversion), which shows how to keep the jenkins configuration and data in subversion. Well, we're in 2013, so I thought that keeping the configuration in git would be more useful :)
+Inspired by [this link](https://jenkins.io/blog/2010/02/10/keeping-your-configuration-and-data-in-subversion), which shows how to keep the jenkins configuration and data in subversion. Well, we're in 2013, so I thought that keeping the configuration in git would be more useful :)
 
 # Usage
 
@@ -11,12 +11,18 @@ Inspired by [this link](http://jenkins-ci.org/content/keeping-your-configuration
 1. Clone the repo:
 
 ```sh
-git clone git@github.com:luisalima/backup_jenkins_config.git
+git clone git@github.com:radario/backup_jenkins_config.git
 ```
 
 2. Edit common.sh and change the environment variables to suit your own configuration. I added some examples to get you started. Don't forget to generate the keys that you are going to use using ssh-keygen, and to add them to your remote git repository.
 
-3. Login with the jenkins user, and run:
+3. Login with the jenkins user,
+
+```sh
+su jenkins
+```
+
+and run:
 
 ```sh
 source backup_jenkins_config/prepare_jenkins_backup.sh
